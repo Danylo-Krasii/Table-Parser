@@ -10,11 +10,10 @@ class tabParser():
     def __init__(self, langs=['ru', 'en']) -> None:
         self.reader = easyocr.Reader(langs, gpu=True,) 
 
-s
     def parse(self, img, path):
         # Binarization
-        _, img_bin = cv2.threshold(img, 128, 255, cv2.THRESH_BINARY)
-        img_bin = 255 - img_bin
+        _, img_bin = cv2.threshold(img, 128, 255, cv2.THRESH_BINARY_INV)
+        # img_bin = 255 - img_bin
 
         vertical_lines = self.get_verticals(img_bin)
         horizontal_lines = self.get_horizontals(img_bin)
