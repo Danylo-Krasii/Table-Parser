@@ -1,6 +1,6 @@
 # Table-Parser
 
-**Table-Parser** is a small project, the essence of which is to parse photos with tables on them and convert it to pandas dataframe.
+**Table-Parser** is a small project, the essence of which is to parse photos with tables on them and convert it to pandas dataframe and then to excel file.
 
 This project uses more than just built-in modules, please check the `requirements.txt` file.
 ```
